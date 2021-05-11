@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet"/>
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/feed.css" type="text/css" />
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.3/jquery.timeago.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  </head>
+  <body>
+    <nav>
+      <span class="logo">tweeter</span>
+      <div id="nav-compose">
+        <span class="compose-tweet-button">Write a new tweet</span>
+        <img class="spring" src="/images/compose.png">
+      </div>
+    </nav>
+    <div id="allContent">
+      <header>
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class="yrname">
+            <h2>Gottlob Frege</h2>
+        </div>
+    </header>
+      <main class="container">
+        <div class="new-tweet">
+          <div class="error"></div>
+          <form method="POST" action="/tweets/" content-type="application/x-www-form-urlencoded">
+            <h4>What are you humming about?</h4>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="num">
+              <button type="submit" >Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </div>
+        <article id="main-feed">
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+header {
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #25008a;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+}
+
+.yrname {
+  color: white;
+}
+
+/* desktop break point */
+@media only screen and (min-width: 1024px) {
+  header {
+    margin: 40px;
+  }
+}
