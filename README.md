@@ -1,3 +1,6 @@
+#UNDER CONSTRUCTION
+rebuilding the Tweeter app as a react app
+
 # Tweeter Project
 
 Tweeter is a simple, single-page AJAX-based Twitter clone written in jQuery, HTML5, JS, and CSS
